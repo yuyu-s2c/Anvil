@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --color-ink: #0c0d10;
+  --color-panel: #14161c;
+  --color-raised: #1b1e26;
+  --color-line: #2a2e38;
+  --color-gold: #e8a838;
+  --color-gold-soft: #f0bc5a;
+  --color-mute: #8b90a0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: #e8eaef;
+  font-family: var(--font-sans);
+  overflow: hidden;
+  user-select: none;
+}
+
+button,
+textarea,
+input {
+  font-family: inherit;
+}
+
+.markdown-body {
+  user-select: text;
+}
+
+.markdown-body p {
+  margin: 0.55em 0;
+}
+
+.markdown-body p:first-child {
+  margin-top: 0;
+}
+
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body pre {
+  overflow-x: auto;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  background: #0a0b0e;
+  border: 1px solid var(--color-line);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.markdown-body code {
+  font-family: "Cascadia Code", "Sarasa Mono SC", "Consolas", monospace;
+  font-size: 0.88em;
+}
+
+.markdown-body :not(pre) > code {
+  padding: 0.1em 0.35em;
+  border-radius: 0.35rem;
+  background: rgba(232, 168, 56, 0.12);
+  color: var(--color-gold-soft);
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 1.25rem;
+  margin: 0.5em 0;
+}
+
+.markdown-body a {
+  color: var(--color-gold-soft);
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid var(--color-line);
+  padding: 0.4rem 0.6rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #323644;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

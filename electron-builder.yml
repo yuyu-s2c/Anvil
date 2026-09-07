@@ -1,0 +1,30 @@
+appId: com.anvil.agent
+productName: Anvil
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+asarUnpack:
+  - resources/**
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/
+win:
+  executableName: Anvil
+  icon: build/icon.png
+  target:
+    - target: portable
+      arch:
+        - x64
+portable:
+  artifactName: Anvil-${version}-portable.${ext}
+nsis:
+  artifactName: Anvil-${version}-setup.${ext}
+  shortcutName: Anvil
+  uninstallDisplayName: Anvil
+  createDesktopShortcut: always
+npmRebuild: false
